@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <h1 align = "center"> 캐치 mine드ㄹ </h1>
+        <h3 align="center">- MineSweeper -</h1>
+        <style>
+            #playing-map-box {
+                height:auto;
+                width:auto;
+                position: relative;
+            }
+            #help-btn {
+                width: 10%;
+            }
+
+            .mine-cell-box {
+                border: 1px solid #000;
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                top: 20px;
+                }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="game">
+            <div id="game-setting">
+                    <h4> game setting </h4>
+                    <span>플레이할 맵의 크기와 지뢰 갯수를 설정해주세요 (5x5 ~ 30x30 까지 가능~!) </span>
+                    <form id="setting-form" style="padding-top: 10px">
+                        <span> 세로: </span>   <input type="number" id="how-many-row" style="width:70px" />
+                        <span> 가로: </span>   <input type="number" id="how-many-column" style="width:70px"/>
+                        <span> 지뢰 개수: </span>   <input type="number" id="how-many-mine" style="width:70px" />  
+                        <input type='submit' value="이 값으로 플레이하기" id="setting-submit-btn" />
+                    </form>        
+                </div>
+            
+            <div id = "game-board">
+                <span style='float:left; padding-right: 10px'> 남은 지뢰 개수: </span>
+                <span id="mineleft-box" style='float:left'> 0 </span>
+                <form id = 'help-form' style="width: 100px; float:left;padding-left: 50px;">
+                    <input type = 'submit' value="help" id="help-btn" style="width: 50px">
+                </form>
+                <span style='float:left; padding-right: 10px;'> time: </span>    <span id="time-box" style='float:left; padding-right: 10px;'> 0 </span> <span style ='float: left; padding-right: 70px;'> sec</span>
+                <form id = "regame-form">
+                    <input type = 'submit' value="리겜?" id = 'regame-btn' />
+                </form>
+            </div>
+            <div id="playing-map-box">
+                
+            </div>
+        </div>
+        <script src="./game.js"></script>
+    </body>
+</html>
